@@ -24,12 +24,17 @@ const techIcons = [
   { name: 'Flask', logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg', href: 'https://flask.palletsprojects.com/' },
   { name: 'HTML', logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg', href: 'https://developer.mozilla.org/en-US/docs/Web/HTML' },
   { name: 'CSS', logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg', href: 'https://developer.mozilla.org/en-US/docs/Web/CSS' },
+  { name: 'React', logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg', href: 'https://react.dev/' },
+  { name: 'Node.js', logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg', href: 'https://nodejs.org/' },
   { name: 'Flutter', logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg', href: 'https://flutter.dev/' },
-  { name: 'Unity', logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg', href: 'https://unity.com/' },
-  { name: 'Canva', logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/canva/canva-original.svg', href: 'https://www.canva.com/' },
-  { name: 'AWS Cloud', logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg', href: 'https://aws.amazon.com/' },
-  { name: 'MongoDB', logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg', href: 'https://www.mongodb.com/' },
   { name: 'Kotlin', logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg', href: 'https://kotlinlang.org/' },
+  { name: 'Firebase', logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg', href: 'https://firebase.google.com/' },
+  { name: 'Supabase', logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg', href: 'https://supabase.com/' },
+  { name: 'MongoDB', logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg', href: 'https://www.mongodb.com/' },
+  { name: 'AWS Cloud', logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg', href: 'https://aws.amazon.com/' },
+  { name: 'Unity', logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg', href: 'https://unity.com/' },
+  { name: 'Figma', logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg', href: 'https://www.figma.com/' },
+  { name: 'Canva', logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/canva/canva-original.svg', href: 'https://www.canva.com/' },
 ];
 
 export default function SkillsSection() {
