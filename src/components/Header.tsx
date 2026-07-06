@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import AppLogo from '@/components/ui/AppLogo';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const navItems = [
   { label: 'About', href: '#about' },
@@ -12,6 +13,8 @@ const navItems = [
 ];
 
 export default function Header() {
+  const pathname = usePathname();
+  const isHome = pathname === '/';
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
@@ -78,10 +81,11 @@ export default function Header() {
         <div className="hidden md:flex items-center gap-1">
           {navItems?.map((item) => {
             const isActive = activeSection === item?.href?.replace('#', '');
+            const targetHref = isHome ? item?.href : `/${item?.href}`;
             return (
-              <a
+              <Link
                 key={item?.label}
-                href={item?.href}
+                href={targetHref}
                 className="relative px-4 py-2 text-sm font-semibold transition-all duration-300 group"
                 style={{
                   color: isActive ? '#00BFFF' : 'rgba(226,232,240,0.7)',
@@ -100,7 +104,7 @@ export default function Header() {
                 {/* Glow bg on hover */}
                 <span className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   style={{ background: 'rgba(124,58,237,0.08)' }} />
-              </a>
+              </Link>
             );
           })}
         </div>
@@ -142,18 +146,21 @@ export default function Header() {
         style={{ background: 'rgba(10,10,15,0.95)', backdropFilter: 'blur(20px)' }}
       >
         <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-2 border-t border-border">
-          {navItems?.map((item) => (
-            <a
-              key={item?.label}
-              href={item?.href}
-              onClick={() => setMenuOpen(false)}
-              className="py-3 text-base font-semibold border-b border-border/30 last:border-0 transition-colors duration-200"
-              style={{ color: 'rgba(226,232,240,0.8)' }}
-            >
-              <span className="mr-2 text-primary">›</span>
-              {item?.label}
-            </a>
-          ))}
+          {navItems?.map((item) => {
+            const targetHref = isHome ? item?.href : `/${item?.href}`;
+            return (
+              <Link
+                key={item?.label}
+                href={targetHref}
+                onClick={() => setMenuOpen(false)}
+                className="py-3 text-base font-semibold border-b border-border/30 last:border-0 transition-colors duration-200"
+                style={{ color: 'rgba(226,232,240,0.8)' }}
+              >
+                <span className="mr-2 text-primary">›</span>
+                {item?.label}
+              </Link>
+            );
+          })}
           <a
             href="/assets/Rohan_Ghuge_Resume.pdf"
             download="Rohan_Ghuge_Resume.pdf"

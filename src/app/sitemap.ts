@@ -2,12 +2,21 @@ import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://rohan-dev-portfolio-nine.vercel.app';
-  return [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 1.0,
-    },
+  const routes = [
+    '',
+    '/about',
+    '/skills',
+    '/projects',
+    '/experience',
+    '/achievements',
+    '/contact',
+    '/resume',
   ];
+
+  return routes.map((route) => ({
+    url: `${baseUrl}${route}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly',
+    priority: route === '' ? 1.0 : 0.8,
+  }));
 }
