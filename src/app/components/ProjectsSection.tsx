@@ -20,7 +20,7 @@ const projects: MagicBentoCard[] = [
       'Inventory management system for Mahavir Provisions to manage products and stock efficiently through a simple web UI.',
     label: 'Inventory',
     tech: ['HTML', 'CSS', 'Frontend'],
-    image: 'https://img.rocket.new/generatedImages/rocket_gen_img_1069e702b-1772175188279.png',
+    image: '/assets/images/smart_inventory_bg.png',
     status: 'Completed',
   },
   {
